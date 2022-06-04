@@ -1,0 +1,76 @@
+﻿<!--
+    author: Fahim (Seeker) Ahmed
+-->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="style.css" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/lucida-handwriting-std" rel="stylesheet">
+
+</head>
+<style>
+    @import url('http://fonts.cdnfonts.com/css/lucida-handwriting-std');
+</style>
+
+<body>
+
+
+    <div class="main">
+        <h1 class="title">Blackjack Game!</h1>
+
+        <div class="board">
+            <div class="topbar">
+                <div class="player-score">
+                    Player Score: <span></span>
+                </div>
+                <div class="dealer-score">
+                    Dealer Score: <span></span>
+                </div>
+                <div>
+                    <button type="button" id="nextRound" disabled>Next Round</button>
+                </div>
+                <div>
+                    <button type="button" id="startNewGame">Start new Game</button>
+                </div>
+                <div class="cardsLeftCount">
+                    Cards left in deck: <span></span>
+                </div>
+            </div>
+            <div class="dealer">
+                <div class="cards"></div>
+                <div class="score">
+                    <h1>Dealer</h1>
+                    <span>00</span>
+                </div>
+            </div>
+            <div class="player">
+                <div class="cards"></div>
+                <div class="score">
+                    <h1>Player</h1>
+                    <span>00</span>
+                </div>
+            </div>
+            <div class="bottombar">
+                <div>
+                    <button id="hit" type="button" disabled>Hit</button>
+                </div>
+                <div>
+                    <button id="stand" type="button" disabled>Stand</button>
+                </div>
+            </div>
+            <div class="popup">BUST</div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="jquery-3.6.0.js"></script>
+<script src="blackjack.js"></script>
+
+</html>

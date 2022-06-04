@@ -1,0 +1,146 @@
+/*
+ * author: Fahim (Seeker) Ahmed
+*/
+
+body {
+    background-color: gray;
+    margin: 0;
+}
+
+.title {
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.board {
+    border: 1px solid black;
+    height: 80vh;
+    /* Background picture credit: Fahim (Seeker) Ahmed */
+    background: url('./images/BlackjackBoard.svg') no-repeat;
+    background-size: contain;
+    aspect-ratio: 4895/3268;
+    display: grid;
+    grid-template-rows:1fr 4fr 4fr;
+    position: relative;
+}
+
+.topbar {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.bottombar {
+    padding: 10px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
+
+
+
+.popup {
+    position: absolute;
+    left: calc(50% - 120px);
+    top: calc(50% - 65px);
+    width: 250px;
+    height: 130px;
+    color: aliceblue;
+    font-size: 4em;
+    /* Credit: CSS gradient generator: https://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+    background: linear-gradient(to bottom,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 );
+    background-color: black;
+    display: none;
+    padding: 5px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.popup p {
+    font-size: 1.1rem;
+}
+
+.cards {
+    height: 95%;
+    position: relative;
+}
+
+.card {
+    height: 95%;
+    display: inline-block;
+    position: absolute;
+    aspect-ratio: 3/5;
+}
+
+.player, .dealer {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.score {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 5em;
+    justify-self: center;
+    align-self: center;
+    color: seashell;
+}
+
+.score h1 {
+    margin-bottom: 7px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+    font-family: 'Lucida Handwriting Std', sans-serif;
+}
+.score span {
+    font-size: 1.2em;
+}
+
+/* buttons - credit: https://getcssscan.com/css-buttons-examples  */ 
+button {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 1.5rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05);
+}
+
+button[disabled] {
+    background: rgb(22, 22, 22);
+    box-shadow: none;
+
+}
+button[disabled]:hover {
+    transform: scale(1.00);
+    box-shadow: none ;
+}
+
+button#hit , button#stand {
+    width: 100%;
+}
+
+.player-score, .dealer-score {
+    padding-left: 10px;
+    color: aliceblue;
+    font-size: 1.6rem;
+    font-family: 'Lucida Handwriting Std', sans-serif;
+}
+.cardsLeftCount {
+    color: aliceblue;
+}
